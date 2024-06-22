@@ -57,8 +57,8 @@ GET /guide
 ##Setup and Installation
 1. Clone the Repository:
 ```bash
-git clone https://github.com/yourusername/deutsche-bahn-api.git
-cd deutsche-bahn-api
+git clone git@github.com:NotEnough1130/Smart-API-for-Train-Company.git
+cd BreadcrumbsSmart-API-for-Train-Company
 ```
 2. Create a Virtual Environment and Install Dependencies:
 ```bash
@@ -68,7 +68,7 @@ pip install -r requirements.txt
 ```
 3. Set Up Environment Variables:
 - Create a .env file in the root directory.
-- Add your Google API key for the Gemini API:
+- Add your Google API key for the Gemini API at '.env' file:
 ```
 GEMINI_API_KEY=your_gemini_api_key
 ```
