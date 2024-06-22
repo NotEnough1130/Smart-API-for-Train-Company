@@ -79,3 +79,12 @@ Running the API
 flask run
 ```
 
+## Output Demo
+```
+From: Düsseldorf Hbf
+To: Köln Hbf
+Result: 3
+Top result: {'Transportation_Type': 'nationalExpress', 'Transportation_Name': 'ICE 921', 'Platform': 'Departure from platform 5 towards Frankfurt(Main)Hbf', 'Departure_Time': '2024-04-02T03:21:00+02:00', 'Arrival_Time': '2024-04-02T03:44:00+02:00'}
+Description_to_Destination: Köln Hauptbahnhof (Cologne Central Station) is a major railway station in Cologne, Germany. It is one of the largest and busiest stations in the country, with over 1,000 trains departing and arriving each day. The station is a hub for regional, national, and international rail services, and is also served by the Cologne Stadtbahn light rail system. Köln Hbf is located in the heart of Cologne, within walking distance of many of the city's main attractions, including the Cologne Cathedral, the Ludwig Museum, and the Cologne Zoo.
+```
+
