@@ -54,31 +54,51 @@ flask run
 
 ## API Endpoints
 Add Stops: 
+- Searches for stops using the Deutsche Bahn API, adds new stops to the database, and updates existing ones.
 ```bash
 PUT /stops?query=<query>
 ```
 Retrieve Stop:
+- Retrieves information about a specific stop, including optional fields (name, latitude, longitude).
 ```bash 
 GET /stops/<stop_id>?include=<fields>
 ```
 Delete Stop: 
+- Deletes a specific stop from the database.
 ```bash
 DELETE /stops/<stop_id>
 ```
 Update Stop: 
+- Updates specific fields of a stop.
 ```bash
 PATCH /stops/<stop_id>
 ```
 Operator Profiles: 
+- Retrieves operator information for a specific stop, generating content using the Gemini Pro model.
 ```bash
 GET /operator-profiles/<stop_id>
 ```
 Tourism Guide: 
+- Generates a tourism guide based on available transportation data and saves it to a text file, which can be downloaded.
 ```bash
 GET /guide
 ```
 
 ## Tourism Guide Output Demo
+1.  Run the Program
+```
+python main.py
+```
+2. Add Stops to the Database
+```
+curl -X PUT "http://localhost:8888/stops" -H "Content-Type: application/json" -d '{"query": "hbf"}'
+```
+
+3. Generate the Tourism Guide
+```
+curl -X GET "http://localhost:8888/guide"
+```
+
 ```
 From: Düsseldorf Hbf
 To: Köln Hbf
