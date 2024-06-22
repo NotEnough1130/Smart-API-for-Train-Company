@@ -10,9 +10,9 @@ from requests import get, RequestException
 from datetime import datetime
 from socket import gethostbyname, gethostname
 
-studentid = Path(__file__).stem        
-db_file   = f"{studentid}.db"          
-txt_file  = f"{studentid}.txt"         
+appname = Path(__file__).stem        
+db_file   = f"{appname}.db"          
+txt_file  = f"{appname}.txt"         
 
 # Load the environment variables from the .env file
 load_dotenv()
@@ -26,7 +26,7 @@ gemini = genai.GenerativeModel("gemini-pro")
 PORT = 8888
 HOST_NAME = gethostbyname(gethostname())
 app = Flask(__name__)
-api = Api(app, title="Assign2", description="For Assign2 ans")
+api = Api(app, title="apiapp", description="API app")
 app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///${db_file}"
 db = SQLAlchemy(app)
 
