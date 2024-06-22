@@ -12,7 +12,6 @@ This project is aim as a excisece to connect with real-life APIs (Deutsche Bahn 
 - Operator Profiles: Retrieve profiles of operators for services departing from a stop within 90 minutes.
 - Tourism Guide: Generate a text-based tourism guide for points of interest around selected stops.
 
-
 ## Technologies Used
 Backend: Flask, Flask-RESTX
 Database: SQLite
@@ -27,6 +26,31 @@ Google Gemini API: Gemini API is a REST API for using Google’s AI Model named
 “Gemini”, which is similar to Chat-GPT. In this project I have 
 use a Google Account to create an API key and use the key to generate tourism guides.
 Reference: https://ai.google.dev/api/python/google/generativeai
+
+## Setup and Installation
+1. Clone the Repository:
+```bash
+git clone git@github.com:NotEnough1130/Smart-API-for-Train-Company.git
+cd BreadcrumbsSmart-API-for-Train-Company
+```
+2. Create a Virtual Environment and Install Dependencies:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+3. Set Up Environment Variables:
+- Create a .env file in the root directory.
+- Add your Google API key for the Gemini API at '.env' file:
+```
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+## Usage
+Running the API
+```bash
+flask run
+```
 
 ## API Endpoints
 Add Stops: 
@@ -54,32 +78,7 @@ Tourism Guide:
 GET /guide
 ```
 
-##Setup and Installation
-1. Clone the Repository:
-```bash
-git clone git@github.com:NotEnough1130/Smart-API-for-Train-Company.git
-cd BreadcrumbsSmart-API-for-Train-Company
-```
-2. Create a Virtual Environment and Install Dependencies:
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-3. Set Up Environment Variables:
-- Create a .env file in the root directory.
-- Add your Google API key for the Gemini API at '.env' file:
-```
-GEMINI_API_KEY=your_gemini_api_key
-```
-
-## Usage
-Running the API
-```bash
-flask run
-```
-
-## Output Demo
+## Tourism Guide Output Demo
 ```
 From: Düsseldorf Hbf
 To: Köln Hbf
